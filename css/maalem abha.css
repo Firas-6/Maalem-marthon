@@ -6,7 +6,7 @@
 
 body {
   font-family: "Arial", sans-serif;
-  background: linear-gradient(135deg, white 0%, Black 100%);
+  background: linear-gradient(to bottom right, #a8a5a5, #e9eef5);
   min-height: 100vh;
   direction: rtl;
 }
@@ -271,7 +271,7 @@ body {
   border-radius: 25px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(255, 140, 0, 0.3);
+  box-shadow: 0 6px 20px rgba(255, 140, 0, 0.4);
 }
 
 .register-btn:hover {
@@ -412,11 +412,12 @@ body {
 }
 
 /* Footer */
-.footer-section {
-  background: linear-gradient(135deg, #1e3c72, #2a5298);
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #334;
   color: white;
-  padding: 3rem 0;
-  margin-top: 4rem;
 }
 
 
