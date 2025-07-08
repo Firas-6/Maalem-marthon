@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title >إنشاء حساب جديد   </title>
+    <link rel="stylesheet" href="css/Login.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Background -->
+        <div class="background"></div>
+        <div class="overlay"></div>
+
+        <!-- Header -->
+         
+        <header class="header">
+             <!-- Logo -->
+        <div class="navbar-brand">
+            <img src="images/Layer_1.svg" alt="Logo" class="logo-img">
+        </div>
+            <div class="header-Right">
+                <button class="icon-btn" id="menuBtn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+                <button class="icon-btn" id="userBtn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </button>
+            </div>
+
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="form-card">
+                <div class="form-header">
+                    <h1 class="form-title">إنشاء حساب جديد</h1>
+                    <div class="form-description">
+                        <p>*قم بتعبئة الحقول التالية لتسجيل حساب جديد</p>
+                   <p>
+                
+                   </p> *الرجاء التأكد من البريد الإلكتروني لأنه سيكون وسيلة التواصل الأساسية</p>
+                    </div>
+                </div>
+
+                <form class="registration-form" id="registrationForm">
+                    <div class="form-group">
+                        <label for="fullName" class="form-label">اسم المشترك</label>
+                        <input type="text" id="fullName" name="fullName" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label">البريد الإلكتروني</label>
+                        <input type="email" id="email" name="email" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone" class="form-label">رقم الجوال</label>
+                        <input type="tel" id="phone" name="phone" class="form-input" required>
+                    </div>
+
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        <span class="btn-text">إنشاء حساب</span>
+                        <span class="btn-loading" style="display: none;">جاري التحميل...</span>
+                    </button>
+
+                    <div class="form-footer">
+                        <a href="#" class="login-link">لديك حساب بالفعل؟ سجل دخول</a>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
