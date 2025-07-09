@@ -1,4 +1,3 @@
-<!-- HTML: index.html -->
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -7,261 +6,443 @@
   <title>ماراثون معالم المدينة</title>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/maalem Almadinh.css">
+  <style>
+    /* إضافة CSS للأيقونات الجديدة */
+   
+  </style>
 </head>
 <body>
   <header class="hero">
     <div class="overlay">
       <div class="navbar">
-           
-             <!-- Logo -->
+        <!-- Logo -->
         <div class="navbar-brand">
-            <img src="images/Layer_1.svg" alt="Logo" class="logo-img">
+          <img src="images/Layer_1.svg" alt="Logo" class="logo-img">
         </div>
-            <div class="header-Right">
-                <button class="icon-btn" id="menuBtn">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <line x1="3" y1="6" x2="21" y2="6"></line>
-                        <line x1="3" y1="12" x2="21" y2="12"></line>
-                        <line x1="3" y1="18" x2="21" y2="18"></line>
-                    </svg>
-                </button>
-                <button class="icon-btn" id="userBtn">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                        <circle cx="12" cy="7" r="4"></circle>
-                    </svg>
-                </button>
-            </div>
- <div class="hero-text">
-        <h1>معالم المدينة</h1>
-        <p>15 فبراير 2025</p> 
-                                 <button class="register-btn">سجل الآن</button>
-
+        
+        <div class="header-Right">
+          <button class="icon-btn" id="menuBtn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+          <button class="icon-btn" id="userBtn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </button>
+        </div>
+        
+        <div class="hero-text">
+          <h1>معالم المدينة</h1>
+          <p>15 فبراير 2025</p>
+          <button class="register-btn">سجل الآن</button>
+        </div>
       </div>
-        </header>
-      
-
+    </div>
+  </header>
+  
   <main class="main-content">
     <section class="intro">
       <h2>كن أحد المشاركين في ماراثون معالم</h2>
       <p>"ماراثون معالم" هو مبادرة رياضية ومجتمعية ستُقام سنويًا في المدينة المنورة، حيث تجمع بين تعزيز ثقافة المشي واستكشاف المعالم الإسلامية والأثرية الفريدة في منطقة المدينة المنورة وستعزز السياحة في المنطقة حيث سيتم اختيار مسارات تمر بمعالمها التاريخية والدينية. وتتميز كل دورة من الماراثون بتسليط الضوء على قضية مجتمعية أو بيئية هامة...</p>
+      
       <div class="prize">
-        <span class="amount">50,000+</span>
+        <div class="prize-amount">
+          <!-- أيقونة الريال السعودي -->
+          <svg width="64" height="64" viewBox="0 0 100 100" class="riyal-icon">
+            <defs>
+              <linearGradient id="riyalGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#f97316" />
+                <stop offset="100%" stop-color="#ea580c" />
+              </linearGradient>
+            </defs>
+            <g fill="url(#riyalGradient)">
+              <rect x="15" y="10" width="8" height="50" rx="2" />
+              <rect x="35" y="10" width="8" height="50" rx="2" />
+              <rect x="10" y="25" width="40" height="6" rx="2" />
+              <rect x="10" y="40" width="40" height="6" rx="2" />
+              <rect x="55" y="30" width="25" height="6" rx="2" transform="rotate(15 67.5 33)" />
+              <rect x="55" y="45" width="25" height="6" rx="2" transform="rotate(15 67.5 48)" />
+              <rect x="55" y="60" width="25" height="6" rx="2" transform="rotate(15 67.5 63)" />
+              <path d="M 15 60 Q 25 75 35 60" stroke-width="6" stroke="url(#riyalGradient)" fill="none" stroke-linecap="round" />
+            </g>
+          </svg>
+          <span class="amount">50,000</span>
+        </div>
         <p>مجموع الجوائز في ماراثون معالم المدينة</p>
       </div>
     </section>
-
+    
     <section class="free-tracks pricing">
-      <h2> المســـــــارات</h2>
+      <h2>المســـــــارات</h2>
       <div class="pricing-cards">
         <div class="card card-blue">
           <div class="card-header">
-             <h3>89 ريـــال</h3>
-            <h3>مســـــار 21 كيلــــو </h3>
+            <h3>89 ريـــال</h3>
+            <h3>مســـــار 21 كيلــــو</h3>
           </div>
           <ul class="features">
-            <li>•   للرياضيين </li>
-            <li>•   للمحترفين </li>
-            <li>•   خدمات طبية على الطريق</li>
+            <li>• للرياضيين</li>
+            <li>• للمحترفين</li>
+            <li>• خدمات طبية على الطريق</li>
           </ul>
-          <button class="register-btn">نفذت التذاكر </button>
+          <button class="register-btn">نفذت التذاكر</button>
         </div>
-
         <div class="card card-orange">
           <div class="card-header">
             <h3>65 ريـــال</h3>
-            <h3>مســـــار 10 كيلــــو </h3>
+            <h3>مســـــار 10 كيلــــو</h3>
           </div>
           <ul class="features">
-            <li>• للعوائل      </li>
-            <li>•  للهواه والمحترفين</li>
-            <li>•   خدمات طبية على الطريق</li>
+            <li>• للعوائل</li>
+            <li>• للهواه والمحترفين</li>
+            <li>• خدمات طبية على الطريق</li>
           </ul>
-          <button class="register-btn">نفذت التذاكر </button>
+          <button class="register-btn">نفذت التذاكر</button>
         </div>
-
         <div class="card card-green">
           <div class="card-header">
-             <h3>49 ريـــال</h3>
-            <h3>مســـــار ٥ كيلــــو </h3>
+            <h3>49 ريـــال</h3>
+            <h3>مســـــار ٥ كيلــــو</h3>
           </div>
           <ul class="features">
-            <li>•للأطفال والعوائل </li>
-            <li>•  للهواه</li>
-            <li>•  خدمات طبية على الطريق </li>
+            <li>• للأطفال والعوائل</li>
+            <li>• للهواه</li>
+            <li>• خدمات طبية على الطريق</li>
           </ul>
-          <button class="register-btn">نفذت التذاكر </button>
+          <button class="register-btn">نفذت التذاكر</button>
         </div>
       </div>
     </section>
   </main>
   
-    <section class="winners-section">
+  <section class="winners-section">
     <div class="container">
       <h2 class="title">الفائزين بالمسابقات</h2>
       <div class="divider"></div>
       <h2 class="title">( الرجال| Males )</h2>
-
-            <h2 class="title">مسار 5 كيلــــو </h2>
-
+      
+      <h2 class="title">مسار 5 كيلــــو</h2>
       <div class="cards">
         <div class="winner-card card-blue">
           <div class="place">1</div>
           <div class="icon">🥇</div>
-          <div class="name">رائد الجاداني</div>
+          
+          <div class="name-with-flag">
+            <!-- العلم السعودي -->
+            <svg width="28" height="21" viewBox="0 0 100 75" class="flag-icon">
+              <rect width="100" height="75" fill="#006C35" />
+              <text x="50" y="35" text-anchor="middle" fill="white" font-size="8" font-weight="bold">لا إله إلا الله</text>
+              <text x="50" y="45" text-anchor="middle" fill="white" font-size="6">محمد رسول الله</text>
+              <path d="M20 55 L25 52 L22 58 Z" fill="white" />
+            </svg>
+            <div class="name">رائد الجاداني</div>
+          </div>
           <div class="english-name">Raaid Aljadaani</div>
         </div>
-
         <div class="winner-card card-orange">
           <div class="place">2</div>
           <div class="icon">🥈</div>
-          <div class="name">محمود محمد</div>
+          <div class="name-with-flag">
+            <!-- علم الصومال -->
+            <svg width="28" height="21" viewBox="0 0 100 75" class="flag-icon">
+              <rect width="100" height="75" fill="#4189DD" />
+              <path d="M50 20 L54 32 L67 32 L57 40 L61 52 L50 44 L39 52 L43 40 L33 32 L46 32 Z" fill="white" />
+            </svg>
+            <div class="name">محمود محمد</div>
+          </div>
           <div class="english-name">Mahmud Mohamed</div>
         </div>
-        
-
         <div class="winner-card card-green">
           <div class="place">3</div>
           <div class="icon">🥉</div>
-          <div class="name">محمد علي</div>
+          <div class="name-with-flag">
+            <!-- العلم السعودي -->
+            <svg width="28" height="21" viewBox="0 0 100 75" class="flag-icon">
+              <rect width="100" height="75" fill="#006C35" />
+              <text x="50" y="35" text-anchor="middle" fill="white" font-size="8" font-weight="bold">لا إله إلا الله</text>
+              <text x="50" y="45" text-anchor="middle" fill="white" font-size="6">محمد رسول الله</text>
+              <path d="M20 55 L25 52 L22 58 Z" fill="white" />
+            </svg>
+            <div class="name">علي محمد</div>
+          </div>
           <div class="english-name">Ali Muhammad</div>
         </div>
       </div>
-                  <h2 class="title">مسار 10 كيلــــو </h2>
-
+      
+      <h2 class="title">مسار 10 كيلــــو</h2>
       <div class="cards">
         <div class="winner-card card-blue">
           <div class="place">1</div>
           <div class="icon">🥇</div>
-          <div class="name"> اسماعيل الخرشي</div>
-          <div class="english-name"> Ismail El KHarchi</div>
+          <div class="name-with-flag">
+            <!-- العلم السعودي -->
+            <svg width="28" height="21" viewBox="0 0 100 75" class="flag-icon">
+              <rect width="100" height="75" fill="#006C35" />
+              <text x="50" y="35" text-anchor="middle" fill="white" font-size="8" font-weight="bold">لا إله إلا الله</text>
+              <text x="50" y="45" text-anchor="middle" fill="white" font-size="6">محمد رسول الله</text>
+              <path d="M20 55 L25 52 L22 58 Z" fill="white" />
+            </svg>
+            <div class="name">اسماعيل الخرشي</div>
+          </div>
+          <div class="english-name">Ismail El KHarchi</div>
         </div>
-
         <div class="winner-card card-orange">
           <div class="place">2</div>
           <div class="icon">🥈</div>
-          <div class="name">عبدالفتاح ظاهر </div>
-          <div class="english-name"> Abdolfatah Daher</div>
+          <div class="name-with-flag">
+            <!-- علم جيبوتي -->
+            <svg width="28" height="21" viewBox="0 0 100 75" class="flag-icon">
+              <rect width="100" height="37.5" fill="#6AB2E7" />
+              <rect y="37.5" width="100" height="37.5" fill="#12AD2B" />
+              <polygon points="0,0 30,37.5 0,75" fill="white" />
+              <path d="M15 30 L17 35 L22 35 L18 38 L20 43 L15 40 L10 43 L12 38 L8 35 L13 35 Z" fill="#D7141A" />
+            </svg>
+            <div class="name">عبدالفتاح ظاهر</div>
+          </div>
+          <div class="english-name">Abdolfatah Daher</div>
         </div>
-        
-
         <div class="winner-card card-green">
           <div class="place">3</div>
           <div class="icon">🥉</div>
-          <div class="name"> أمين اسويدة</div>
-          <div class="english-name">Amine Souida </div>
+          <div class="name-with-flag">
+            <!-- العلم المغربي -->
+            <svg width="28" height="21" viewBox="0 0 100 75" class="flag-icon">
+              <rect width="100" height="75" fill="#C1272D" />
+              <path d="M50 20 L54 32 L67 32 L57 40 L61 52 L50 44 L39 52 L43 40 L33 32 L46 32 Z" fill="#006233" />
+            </svg>
+            <div class="name">أمين اسويدة</div>
+          </div>
+          <div class="english-name">Amine Souida</div>
         </div>
       </div>
-                  <h2 class="title">مسار 21 كيلــــو </h2>
-
+      
+      <h2 class="title">مسار 21 كيلــــو</h2>
       <div class="cards">
         <div class="winner-card card-blue">
           <div class="place">1</div>
           <div class="icon">🥇</div>
-          <div class="name">  علي الشهراني</div>
-          <div class="english-name">   Ali Al-Shrani</div>
+          <div class="name-with-flag">
+            <!-- العلم السعودي -->
+            <svg width="28" height="21" viewBox="0 0 100 75" class="flag-icon">
+              <rect width="100" height="75" fill="#006C35" />
+              <text x="50" y="35" text-anchor="middle" fill="white" font-size="8" font-weight="bold">لا إله إلا الله</text>
+              <text x="50" y="45" text-anchor="middle" fill="white" font-size="6">محمد رسول الله</text>
+              <path d="M20 55 L25 52 L22 58 Z" fill="white" />
+            </svg>
+            <div class="name">علي الشهراني</div>
+          </div>
+          <div class="english-name">Ali Al-Shrani</div>
         </div>
-
         <div class="winner-card card-orange">
-          <div class="place">2</div>
-          <div class="icon">🥈</div>
-          <div class="name"> أحمد موسى </div>
-          <div class="english-name"> Ahmed Mussa</div>
-        </div>
-        
-
+  <div class="place">2</div>
+  <div class="icon">🥈</div>
+  <div class="name-with-flag">
+    <!-- العلم الأمريكي -->
+    <svg width="28" height="21" viewBox="0 0 100 75" class="flag-icon">
+      <!-- الخلفية الحمراء -->
+      <rect width="100" height="75" fill="#B22234" />
+      
+      <!-- الخطوط البيضاء -->
+      <rect y="6" width="100" height="4" fill="white" />
+      <rect y="15" width="100" height="4" fill="white" />
+      <rect y="24" width="100" height="4" fill="white" />
+      <rect y="33" width="100" height="4" fill="white" />
+      <rect y="42" width="100" height="4" fill="white" />
+      <rect y="51" width="100" height="4" fill="white" />
+      <rect y="60" width="100" height="4" fill="white" />
+      
+      <!-- المربع الأزرق -->
+      <rect width="38" height="40" fill="#3C3B6E" />
+      
+      <!-- النجوم -->
+      <g fill="white" font-size="4" text-anchor="middle">
+        <text x="8" y="8">★</text>
+        <text x="16" y="8">★</text>
+        <text x="24" y="8">★</text>
+        <text x="32" y="8">★</text>
+        <text x="12" y="16">★</text>
+        <text x="20" y="16">★</text>
+        <text x="28" y="16">★</text>
+        <text x="8" y="24">★</text>
+        <text x="16" y="24">★</text>
+        <text x="24" y="24">★</text>
+        <text x="32" y="24">★</text>
+        <text x="12" y="32">★</text>
+        <text x="20" y="32">★</text>
+        <text x="28" y="32">★</text>
+      </g>
+    </svg>
+    <div class="name">أحمد موسى</div>
+  </div>
+  <div class="english-name">Ahmed Mussa</div>
+</div>
         <div class="winner-card card-green">
           <div class="place">3</div>
           <div class="icon">🥉</div>
-          <div class="name">  عاصم الأنصاري</div>
-          <div class="english-name"> Asim Alansary </div>
+          <div class="name-with-flag">
+            <!-- العلم السعودي -->
+            <svg width="28" height="21" viewBox="0 0 100 75" class="flag-icon">
+              <rect width="100" height="75" fill="#006C35" />
+              <text x="50" y="35" text-anchor="middle" fill="white" font-size="8" font-weight="bold">لا إله إلا الله</text>
+              <text x="50" y="45" text-anchor="middle" fill="white" font-size="6">محمد رسول الله</text>
+              <path d="M20 55 L25 52 L22 58 Z" fill="white" />
+            </svg>
+            <div class="name">عاصم الأنصاري</div>
+          </div>
+          <div class="english-name">Asim Alansary</div>
         </div>
       </div>
-            <h2 class="title">( النساء| Females )</h2>
-            <h2 class="title">مسار 5 كيلــــو </h2>
-
+      
+      <h2 class="title">( النساء| Females )</h2>
+      
+      <h2 class="title">مسار 5 كيلــــو</h2>
       <div class="cards">
         <div class="winner-card card-blue">
           <div class="place">1</div>
           <div class="icon">🥇</div>
-          <div class="name">   شهد الربدي</div>
-          <div class="english-name"> Shahad Alrebdi</div>
+          <div class="name-with-flag">
+            <!-- العلم السعودي -->
+            <svg width="28" height="21" viewBox="0 0 100 75" class="flag-icon">
+              <rect width="100" height="75" fill="#006C35" />
+              <text x="50" y="35" text-anchor="middle" fill="white" font-size="8" font-weight="bold">لا إله إلا الله</text>
+              <text x="50" y="45" text-anchor="middle" fill="white" font-size="6">محمد رسول الله</text>
+              <path d="M20 55 L25 52 L22 58 Z" fill="white" />
+            </svg>
+            <div class="name">شهد الربدي</div>
+          </div>
+          <div class="english-name">Shahad Alrebdi</div>
         </div>
-
         <div class="winner-card card-orange">
           <div class="place">2</div>
           <div class="icon">🥈</div>
-          <div class="name">  سندس </div>
-          <div class="english-name"> Sundus </div>
+          <div class="name-with-flag">
+            <!-- العلم السعودي -->
+            <svg width="28" height="21" viewBox="0 0 100 75" class="flag-icon">
+              <rect width="100" height="75" fill="#006C35" />
+              <text x="50" y="35" text-anchor="middle" fill="white" font-size="8" font-weight="bold">لا إله إلا الله</text>
+              <text x="50" y="45" text-anchor="middle" fill="white" font-size="6">محمد رسول الله</text>
+              <path d="M20 55 L25 52 L22 58 Z" fill="white" />
+            </svg>
+            <div class="name">سندس</div>
+          </div>
+          <div class="english-name">Sundus</div>
         </div>
-        
-
         <div class="winner-card card-green">
           <div class="place">3</div>
           <div class="icon">🥉</div>
-          <div class="name">   لمياء ايت طالب</div>
-          <div class="english-name"> Lamaa ait taleb  </div>
+          <div class="name-with-flag">
+            <!-- العلم المغربي -->
+            <svg width="28" height="21" viewBox="0 0 100 75" class="flag-icon">
+              <rect width="100" height="75" fill="#C1272D" />
+              <path d="M50 20 L54 32 L67 32 L57 40 L61 52 L50 44 L39 52 L43 40 L33 32 L46 32 Z" fill="#006233" />
+            </svg>
+            <div class="name">لمياء ايت طالب</div>
+          </div>
+          <div class="english-name">Lamaa ait taleb</div>
         </div>
       </div>
-                        <h2 class="title">مسار 10 كيلــــو </h2>
-
+      
+      <h2 class="title">مسار 10 كيلــــو</h2>
       <div class="cards">
         <div class="winner-card card-blue">
           <div class="place">1</div>
           <div class="icon">🥇</div>
-          <div class="name">   وفاء زروال</div>
-          <div class="english-name">  Wafa Zaroual</div>
+          <div class="name-with-flag">
+            <!-- العلم المغربي -->
+            <svg width="28" height="21" viewBox="0 0 100 75" class="flag-icon">
+              <rect width="100" height="75" fill="#C1272D" />
+              <path d="M50 20 L54 32 L67 32 L57 40 L61 52 L50 44 L39 52 L43 40 L33 32 L46 32 Z" fill="#006233" />
+            </svg>
+            <div class="name">وفاء زروال</div>
+          </div>
+          <div class="english-name">Wafa Zaroual</div>
         </div>
-
         <div class="winner-card card-orange">
           <div class="place">2</div>
           <div class="icon">🥈</div>
-          <div class="name">  اهتو هدى </div>
-          <div class="english-name"> Ahettiou Houda</div>
+          <div class="name-with-flag">
+            <!-- العلم المغربي -->
+            <svg width="28" height="21" viewBox="0 0 100 75" class="flag-icon">
+              <rect width="100" height="75" fill="#C1272D" />
+              <path d="M50 20 L54 32 L67 32 L57 40 L61 52 L50 44 L39 52 L43 40 L33 32 L46 32 Z" fill="#006233" />
+            </svg>
+            <div class="name">اهتو هدى</div>
+          </div>
+          <div class="english-name">Ahettiou Houda</div>
         </div>
-        
-
         <div class="winner-card card-green">
           <div class="place">3</div>
           <div class="icon">🥉</div>
-          <div class="name">   سانسيا</div>
-          <div class="english-name"> Sanchia  </div>
+          <div class="name-with-flag">
+            <!-- علم جنوب أفريقيا -->
+            <svg width="28" height="21" viewBox="0 0 100 75" class="flag-icon">
+              <rect width="100" height="75" fill="#007A4D" />
+              <polygon points="0,0 25,37.5 0,75" fill="#000" />
+              <polygon points="0,15 20,37.5 0,60" fill="#FFB612" />
+              <rect y="0" width="100" height="15" fill="#DE3831" />
+              <rect y="60" width="100" height="15" fill="#002395" />
+              <rect y="15" width="100" height="45" fill="white" />
+            </svg>
+            <div class="name">سانسيا</div>
+          </div>
+          <div class="english-name">Sanchia</div>
         </div>
       </div>
-                        <h2 class="title">مسار 21 كيلــــو </h2>
-
+      
+      <h2 class="title">مسار 21 كيلــــو</h2>
       <div class="cards">
         <div class="winner-card card-blue">
           <div class="place">1</div>
           <div class="icon">🥇</div>
-          <div class="name">   رقية الموكم</div>
-          <div class="english-name">    Rkia el Moukim</div>
+          <div class="name-with-flag">
+            <!-- العلم المغربي -->
+            <svg width="28" height="21" viewBox="0 0 100 75" class="flag-icon">
+              <rect width="100" height="75" fill="#C1272D" />
+              <path d="M50 20 L54 32 L67 32 L57 40 L61 52 L50 44 L39 52 L43 40 L33 32 L46 32 Z" fill="#006233" />
+            </svg>
+            <div class="name">رقية الموكم</div>
+          </div>
+          <div class="english-name">Rkia el Moukim</div>
         </div>
-
         <div class="winner-card card-orange">
           <div class="place">2</div>
           <div class="icon">🥈</div>
-          <div class="name">  رجاء الحجيلي </div>
-          <div class="english-name">  Raja Alhejaili</div>
+          <div class="name-with-flag">
+            <!-- العلم السعودي -->
+            <svg width="28" height="21" viewBox="0 0 100 75" class="flag-icon">
+              <rect width="100" height="75" fill="#006C35" />
+              <text x="50" y="35" text-anchor="middle" fill="white" font-size="8" font-weight="bold">لا إله إلا الله</text>
+              <text x="50" y="45" text-anchor="middle" fill="white" font-size="6">محمد رسول الله</text>
+              <path d="M20 55 L25 52 L22 58 Z" fill="white" />
+            </svg>
+            <div class="name">رجاء الحجيلي</div>
+          </div>
+          <div class="english-name">Raja Alhejaili</div>
         </div>
-        
-
         <div class="winner-card card-green">
           <div class="place">3</div>
           <div class="icon">🥉</div>
-          <div class="name">   فاطمة عبدي ديني</div>
-          <div class="english-name">  Faduma Abdi Dini </div>
+          <div class="name-with-flag">
+            <!-- علم الصومال -->
+            <svg width="28" height="21" viewBox="0 0 100 75" class="flag-icon">
+              <rect width="100" height="75" fill="#4189DD" />
+              <path d="M50 20 L54 32 L67 32 L57 40 L61 52 L50 44 L39 52 L43 40 L33 32 L46 32 Z" fill="white" />
+            </svg>
+            <div class="name">فاطمة عبدي ديني</div>
+          </div>
+          <div class="english-name">Faduma Abdi Dini</div>
         </div>
       </div>
-
+      
       <p class="congrats">مبروك للفائزين! 🎉</p>
     </div>
   </section>
-</body>
-</html>
-  </main>
-
-
+  
   <footer class="footer">
     <p>&copy; 2025 ماراثون معالم المدينة</p>
   </footer>
