@@ -158,10 +158,12 @@ body {
 
 
 /* Footer */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #334;
+  color: white;
 }
 
 body {
