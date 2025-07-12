@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Bootstrap 5 RTL CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+<header class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+
+        <!-- Mobile menu toggle -->
+        <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- User icon -->
+        <div class="navbar-nav me-2">
+            <a class="nav-link" href="#"><i class="fas fa-user-circle fs-4"></i></a>
+        </div>
+
+        <!-- ZERO branding - Centered absolutely -->
+        
+
+        <!-- Logo -->
+        <div class="navbar-brand">
+            <img src="images/Layer_1.svg" alt="Logo" class="logo-img">
+            
+        </div>
+
+        <!-- Navigation -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#home">الرئيسية</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">عن الماراثون</a></li>
+                <li class="nav-item"><a class="nav-link" href="#races">السباقات</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">اتصل بنا</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#Questions"> الاسئلة الشائعة</a></li>
+
+            </ul>
+        </div>
+    </div>
+</header>
+
+            
+            <!-- Navigation Menu -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">الرئيسية</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">عن الماراثون</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#races">السباقات</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">اتصل بنا</a></li>
+                     <li class="nav-item"><a class="nav-link" href="#Questions"> الاسئلة الشائعة</a></li>
+
+                </ul>
+            </div>
+        </div>
+        
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1 class="hero-title">انطلق في</h1>
+    <h2 class="hero-subtitle">رحلة في عبق التاريخ</h2>
+    <button class="btn btn-register mt-4" onclick="registerNow()">
+      سجل الآن
+    </button>
+  </div>
+</section>
+
+
+    <!-- About Section -->
+    <section id="about" class="about-section py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <h2 class="section-title text-center mb-5">عن ماراثون معالم</h2>
+                    <p class="about-text text-center">
+                        "ماراثون معالم" تجربة رياضية وثقافية واجتماعية متكاملة، تجسد وتعزز جودة الحياة من خلال 
+                        تشجيع أنماط الحياة الصحية، والاحتفاء بالمعالم التاريخية والحضارية، كما تهدف إلى دعم البعد 
+                        السياحي للمملكة من خلال جذب الزوار المحليين والدوليين، وتعزيز التفاعل بين المواطنين والمقيمين 
+                        والزائرين، بما يعكس صورة المملكة كوجهة رياضية وثقافية عالمية.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Races Section -->
+<section id="races" class="races-section py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">السباقات</h2>
+        <div class="row g-4">
+            <!-- Race Card 1 -->
+           <div class="col-lg-4 col-md-6">
+                <div class="race-card text-center">
+                    <div class="race-image">
+                        <img src="images/madinah.png" alt="المدينة المنورة" class="img-fluid w-100 h-100 object-fit-cover">
+                    </div>
+                    <button class="btn btn-details mt-3" onclick="showDetails('madinah')">
+                        التفاصيل
+                    </button>
+                </div>
+            </div>
+
+            <!-- Race Card 2 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="race-card text-center">
+                    <div class="race-image">
+                        <img src="images/Abha.png" alt="أبها" class="img-fluid w-100 h-100 object-fit-cover">
+                    </div>
+                    <button class="btn btn-details mt-3" onclick="showDetails('abha')">
+                        التفاصيل
+                    </button>
+                </div>
+            </div>
+                        <!-- Race Card 3 -->
+
+ <div class="col-lg-4 col-md-6">
+                <div class="race-card text-center">
+                    <div class="race-image">
+                        <img src="images/Component 3 (2).png" alt="حائل" class="img-fluid w-100 h-100 object-fit-cover">
+                    </div>
+                    <button class="btn btn-details mt-3" onclick="showDetails('hail')">
+                        التفاصيل
+                    </button>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="race-card text-center">
+                    <div class="race-image">
+                        <img src="images/Component 4 (3).png" alt="المدينة المنورة" class="img-fluid w-100 h-100 object-fit-cover">
+                    </div>
+                    <button class="btn btn-details mt-3" onclick="showDetails('madinah')">
+                        التفاصيل
+                    </button>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="race-card text-center">
+                    <div class="race-image">
+                        <img src="images/Component 5 (2).png" alt="العلا " class="img-fluid w-100 h-100 object-fit-cover">
+                    </div>
+                    <button class="btn btn-details mt-3" onclick="showDetails('AlUla')">
+                        التفاصيل
+                    </button>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="race-card text-center">
+                    <div class="race-image">
+                        <img src="images/Component 6 (5).png" alt="الدرعية" class="img-fluid w-100 h-100 object-fit-cover">
+                    </div>
+                    <button class="btn btn-details mt-3" onclick="showDetails('Diriyah')">
+                        التفاصيل
+                    </button>
+                </div>
+            </div>
+            
+
+            
+        </div>
+    </div>
+</section>
+
+
+    <!-- Footer -->
+ <!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Right Section: الشعار + الطقس + الحقوق -->
+    <div class="footer-right" style="text-align: center;">
+      <!-- Logo -->
+      <div class="logo-section">
+        <div class="logo">
+          <img src="images/Layer_1.svg" alt="شعار معالم" class="logo-icon" />
+          <h2>الطقس في أبها . </h2>
+        </div>
+      </div>
+
+      <!-- Weather -->
+      <div class="weather-section mt-3">
+        <div class="weather-info">
+          <div class="weather-item">
+            <i class="fas fa-thermometer-half weather-icon"></i>
+            <span class="weather-value">26.3°</span>
+          </div>
+          <div class="weather-item">
+            <i class="fas fa-cloud weather-icon"></i>
+            <span class="weather-value">12.5 <small>m/s</small></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="copyright mt-4">
+        .Copyright © 2025 ZERO. All rights reserved
+      </div>
+    </div>
+
+    <!-- Center Section: النص + الدفع + التواصل -->
+    <div class="footer-center text-center">
+      <!-- النص -->
+      <p class="main-text">
+        نسعى لجعل "ماراثون معالم" تجربة رياضية واجتماعية تُعزز أهداف برنامج جودة الحياة،
+        وتساهم في تحقيق رؤية المملكة 2030 نحو مجتمع أكثر حيوية وتقدماً.
+      </p>
+
+
+
+
+      
+      <!-- الدفع -->
+      <div class="payment-methods mt-3">
+        <div class="payment-icon apple-pay">
+          <i class="fab fa-apple-pay"></i>
+        </div>
+        <div class="payment-icon visa">
+          <i class="fab fa-cc-visa"></i>
+        </div>
+        <div class="payment-icon mastercard">
+          <i class="fab fa-cc-mastercard"></i>
+        </div>
+        <div class="payment-icon mada">
+          mada
+        </div>
+      </div>
+
+      <!-- حسابات التواصل -->
+      <div class="social-media mt-4">
+        <a href="#" class="social-icon tiktok"><i class="fab fa-tiktok"></i></a>
+        <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-icon x"><i class="fab fa-xing"></i></a> <!-- برنامج X -->
+
+      </div>
+    
+
+
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,333 @@
+
+/* CSS: css/maalem.css */
+* {
+  box-sizing: border-box;
+  font-family: 'Cairo', sans-serif;
+}
+
+body {
+  margin: 0;
+  direction: rtl;
+  color: #222;
+}
+
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+              url("../images/Rectangle 11 (4).png") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  padding: 20px;
+  color: #fff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 60px;
+}
+
+.hero-text {
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+}
+
+.main-content {
+  padding: 40px 60px;
+}
+
+.intro {
+  text-align: center;
+}
+
+.intro h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.intro p {
+  font-size: 1rem;
+  max-width: 600px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+.prize {
+  margin-top: 20px;
+  color: #e87722;
+}
+
+.amount {
+  font-size: 7rem;
+  font-weight: bold;
+  display: block;
+}
+
+.tracks, .free-tracks {
+  margin-top: 50px;
+}
+
+.pricing-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 5rem 2rem;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  color: white;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+}
+
+.card-blue {
+  background: linear-gradient(135deg, #3f518b, #253254);
+}
+
+.card-orange {
+  background: linear-gradient(135deg, #c8812a, #7a5020);
+}
+
+.card-green {
+  background: linear-gradient(135deg, #429a47, #234e25);
+}
+
+.card-header {
+  margin-bottom: 2rem;
+}
+
+.card-header h3 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.highlight {
+  background: linear-gradient(45deg, #fbbf24, #f59e0b);
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  font-weight: bold;
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.features li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.register-btn {
+  background: linear-gradient(135deg, #ff8c00, #ff6b00);
+  color: white;
+  font-weight: bold;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(255, 140, 0, 0.4);
+  border: none;
+}
+
+.register-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #334;
+  color: white;
+}
+/* style.css */
+body {
+  margin: 0;
+  font-family: 'Cairo', sans-serif;
+  background: linear-gradient(to bottom right, #ffffff);
+  direction: rtl;
+}
+
+.winners-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.title1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #cd1010;
+}
+
+
+.divider {
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(to right, #2563eb, #f97316, #22c55e);
+  margin: 0 auto 40px;
+  border-radius: 2px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.winner-card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px 20px;
+  width: 300px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.winner-card:hover {
+  transform: translateY(-8px);
+}
+
+.place {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  font-weight: bold;
+  color: #000;
+}
+
+.icon {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 15px;
+}
+
+.name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.english-name {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.card-blue {
+  background: linear-gradient(135deg, #3f518b, #253254);
+  color: white;
+}
+
+.card-orange {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: white;
+}
+
+.card-green {
+  background: linear-gradient(135deg, #22c55e, #15803d);
+  color: white;
+}
+
+.congrats {
+  margin-top: 50px;
+  font-size: 1.2rem;
+  color: #444;
+}
+ .prize-amount {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    
+    .riyal-icon {
+      width: 64px;
+      height: 64px;
+    }
+    
+    .amount {
+      font-size: 4rem;
+      font-weight: bold;
+      color: #ea580c;
+    }
+    
+   .name-with-flag {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+    .flag-icon-img {
+  margin-top: 8px;
+  width: 50px;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+

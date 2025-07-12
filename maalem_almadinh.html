@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/maalem Almadinh.css">
+  <style>
+    /* إضافة CSS للأيقونات الجديدة */
+   
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="overlay">
+      <div class="navbar">
+        <!-- Logo -->
+        <div class="navbar-brand">
+          <img src="images/Layer_1.svg" alt="Logo" class="logo-img">
+        </div>
+        
+        <div class="header-Right">
+          <button class="icon-btn" id="menuBtn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+          <button class="icon-btn" id="userBtn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </button>
+        </div>
+        
+        <div class="hero-text">
+          <h1>معالم المدينة</h1>
+          <p>15 فبراير 2025</p>
+          <button class="register-btn">سجل الآن</button>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <main class="main-content">
+    <section class="intro">
+      <h2>كن أحد المشاركين في ماراثون معالم</h2>
+      <p>"ماراثون معالم" هو مبادرة رياضية ومجتمعية ستُقام سنويًا في المدينة المنورة، حيث تجمع بين تعزيز ثقافة المشي واستكشاف المعالم الإسلامية والأثرية الفريدة في منطقة المدينة المنورة وستعزز السياحة في المنطقة حيث سيتم اختيار مسارات تمر بمعالمها التاريخية والدينية. وتتميز كل دورة من الماراثون بتسليط الضوء على قضية مجتمعية أو بيئية هامة...</p>
+      
+      <div class="prize">
+        <div class="prize-amount">
+          <!-- أيقونة الريال السعودي -->
+            <defs>
+              <linearGradient id="riyalGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#f97316" />
+                <stop offset="100%" stop-color="#ea580c" />
+              </linearGradient>
+            </defs>
+            <g fill="url(#riyalGradient)">
+              <rect x="15" y="10" width="8" height="50" rx="2" />
+              <rect x="35" y="10" width="8" height="50" rx="2" />
+              <rect x="10" y="25" width="40" height="6" rx="2" />
+              <rect x="10" y="40" width="40" height="6" rx="2" />
+              <rect x="55" y="30" width="25" height="6" rx="2" transform="rotate(15 67.5 33)" />
+              <rect x="55" y="45" width="25" height="6" rx="2" transform="rotate(15 67.5 48)" />
+              <rect x="55" y="60" width="25" height="6" rx="2" transform="rotate(15 67.5 63)" />
+              <path d="M 15 60 Q 25 75 35 60" stroke-width="6" stroke="url(#riyalGradient)" fill="none" stroke-linecap="round" />
+            </g>
+          </svg>
+          <span class="amount">50,000+</span>
+        </div>
+        <p>مجموع الجوائز في ماراثون معالم المدينة</p>
+      </div>
+    </section>
+    
+    <section class="free-tracks pricing">
+      <h2>المســـــــارات</h2>
+      <div class="pricing-cards">
+        <div class="card card-blue">
+          <div class="card-header">
+            <h3>89 ريـــال</h3>
+            <h3>مســـــار 21 كيلــــو</h3>
+          </div>
+          <ul class="features">
+            <li>• للرياضيين</li>
+            <li>• للمحترفين</li>
+            <li>• خدمات طبية على الطريق</li>
+          </ul>
+          <button class="register-btn">نفذت التذاكر</button>
+        </div>
+        <div class="card card-orange">
+          <div class="card-header">
+            <h3>65 ريـــال</h3>
+            <h3>مســـــار 10 كيلــــو</h3>
+          </div>
+          <ul class="features">
+            <li>• للعوائل</li>
+            <li>• للهواه والمحترفين</li>
+            <li>• خدمات طبية على الطريق</li>
+          </ul>
+          <button class="register-btn">نفذت التذاكر</button>
+        </div>
+        <div class="card card-green">
+          <div class="card-header">
+            <h3>49 ريـــال</h3>
+            <h3>مســـــار ٥ كيلــــو</h3>
+          </div>
+          <ul class="features">
+            <li>• للأطفال والعوائل</li>
+            <li>• للهواه</li>
+            <li>• خدمات طبية على الطريق</li>
+          </ul>
+          <button class="register-btn">نفذت التذاكر</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <section class="winners-section">
+    <div class="container">
+      <h2 class="title">الفائزين بالمسابقات</h2>
+      <div class="divider"></div>
+      <h2 class="title">( الرجال| Males )</h2>
+      
+      <h2 class="title">مسار 5 كيلــــو</h2>
+      <div class="cards">
+<div class="winner-card card-blue">
+  <div class="place">1</div>
+  <div class="icon">🥇</div>
+  
+  <div class="name-with-flag">
+    <div class="name">رائد الجاداني</div>
+    <div class="english-name">Raaid Aljadaani</div>
+    <img src="images/Flag_of_Saudi_Arabia.svg" alt="علم السعودية" class="flag-icon-img" />
+  </div>
+</div>
+
+        <div class="winner-card card-orange">
+          <div class="place">2</div>
+          <div class="icon">🥈</div>
+          <div class="name-with-flag">
+            <!-- علم الصومال -->
+          
+            <div class="name">محمود محمد</div>
+          </div>
+          <div class="english-name">Mahmud Mohamed</div>
+              <img src="images/Flag_of_Somalia.svg" alt="علم الصومال" class="flag-icon-img" />
+
+          
+        </div>
+        <div class="winner-card card-green">
+          <div class="place">3</div>
+          <div class="icon">🥉</div>
+          <div class="name-with-flag">
+            <!-- العلم السعودي -->
+            
+            <div class="name">علي محمد</div>
+          </div>
+          <div class="english-name">Ali Muhammad</div>
+              <img src="images/Flag_of_Saudi_Arabia.svg" alt="علم السعودية" class="flag-icon-img" />
+
+        </div>
+      </div>
+      
+      <h2 class="title">مسار 10 كيلــــو</h2>
+      <div class="cards">
+        <div class="winner-card card-blue">
+          <div class="place">1</div>
+          <div class="icon">🥇</div>
+          <div class="name-with-flag">
+            <!-- العلم السعودي -->
+           
+            <div class="name">اسماعيل الخرشي</div>
+          </div>
+          <div class="english-name">Ismail El KHarchi</div>
+              <img src="images/Flag_of_Saudi_Arabia.svg" alt="علم السعودية" class="flag-icon-img" />
+
+        </div>
+        <div class="winner-card card-orange">
+          <div class="place">2</div>
+          <div class="icon">🥈</div>
+          <div class="name-with-flag">
+            <!-- علم جيبوتي -->
+          
+            <div class="name">عبدالفتاح ظاهر</div>
+          </div>
+          <div class="english-name">Abdolfatah Daher</div>
+              <img src="images/Flag_of_Djibouti.svg" alt="علم جيبوتي" class="flag-icon-img" />
+
+        </div>
+        <div class="winner-card card-green">
+          <div class="place">3</div>
+          <div class="icon">🥉</div>
+          <div class="name-with-flag">
+            <!-- العلم المغربي -->
+           
+            <div class="name">أمين اسويدة</div>
+          </div>
+          <div class="english-name">Amine Souida</div>
+                <img src="images/Flag_of_Morocco.svg" alt="علم المغرب" class="flag-icon-img" />
+
+        </div>
+      </div>
+      
+      <h2 class="title">مسار 21 كيلــــو</h2>
+      <div class="cards">
+        <div class="winner-card card-blue">
+          <div class="place">1</div>
+          <div class="icon">🥇</div>
+          <div class="name-with-flag">
+            <!-- العلم السعودي -->
+            
+            <div class="name">علي الشهراني</div>
+          </div>
+          <div class="english-name">Ali Al-Shrani</div>
+              <img src="images/Flag_of_Saudi_Arabia.svg" alt="علم السعودية" class="flag-icon-img" />
+
+        </div>
+        <div class="winner-card card-orange">
+  <div class="place">2</div>
+  <div class="icon">🥈</div>
+  <div class="name-with-flag">
+    
+    <div class="name">أحمد موسى</div>
+  </div>
+  <div class="english-name">Ahmed Mussa</div>
+   <!-- العلم الأمريكي -->
+        <img src="images/Flag_of_the_United_States.svg" alt="علم أمريكا" class="flag-icon-img" />
+
+</div>
+        <div class="winner-card card-green">
+          <div class="place">3</div>
+          <div class="icon">🥉</div>
+          <div class="name-with-flag">
+            <!-- العلم السعودي -->
+          
+            <div class="name">عاصم الأنصاري</div>
+          </div>
+          <div class="english-name">Asim Alansary</div>
+              <img src="images/Flag_of_Saudi_Arabia.svg" alt="علم السعودية" class="flag-icon-img" />
+
+        </div>
+      </div>
+      
+      <h2 class="title">( النساء| Females )</h2>
+      
+      <h2 class="title">مسار 5 كيلــــو</h2>
+      <div class="cards">
+        <div class="winner-card card-blue">
+          <div class="place">1</div>
+          <div class="icon">🥇</div>
+          <div class="name-with-flag">
+            <!-- العلم السعودي -->
+           
+            <div class="name">شهد الربدي</div>
+          </div>
+          <div class="english-name">Shahad Alrebdi</div>
+              <img src="images/Flag_of_Saudi_Arabia.svg" alt="علم السعودية" class="flag-icon-img" />
+
+        </div>
+        <div class="winner-card card-orange">
+          <div class="place">2</div>
+          <div class="icon">🥈</div>
+          <div class="name-with-flag">
+            <!-- العلم السعودي -->
+            
+            <div class="name">سندس</div>
+          </div>
+          <div class="english-name">Sundus</div>
+              <img src="images/Flag_of_Saudi_Arabia.svg" alt="علم السعودية" class="flag-icon-img" />
+
+        </div>
+        <div class="winner-card card-green">
+          <div class="place">3</div>
+          <div class="icon">🥉</div>
+          <div class="name-with-flag">
+            <!-- العلم المغربي -->
+           
+            <div class="name">لمياء ايت طالب</div>
+          </div>
+          <div class="english-name">Lamaa ait taleb</div>
+               <img src="images/Flag_of_Morocco.svg" alt="علم المغرب" class="flag-icon-img" />
+
+        </div>
+      </div>
+      
+      <h2 class="title">مسار 10 كيلــــو</h2>
+      <div class="cards">
+        <div class="winner-card card-blue">
+          <div class="place">1</div>
+          <div class="icon">🥇</div>
+          <div class="name-with-flag">
+            <!-- العلم المغربي -->
+           
+            <div class="name">وفاء زروال</div>
+          </div>
+          <div class="english-name">Wafa Zaroual</div>
+               <img src="images/Flag_of_Morocco.svg" alt="علم المغرب" class="flag-icon-img" />
+
+        </div>
+        <div class="winner-card card-orange">
+          <div class="place">2</div>
+          <div class="icon">🥈</div>
+          <div class="name-with-flag">
+            <!-- العلم المغربي -->
+           
+            <div class="name">اهتو هدى</div>
+          </div>
+          <div class="english-name">Ahettiou Houda</div>
+               <img src="images/Flag_of_Morocco.svg" alt="علم المغرب" class="flag-icon-img" />
+
+        </div>
+        <div class="winner-card card-green">
+          <div class="place">3</div>
+          <div class="icon">🥉</div>
+          <div class="name-with-flag">
+            <!-- علم جنوب أفريقيا -->
+           
+            <div class="name">سانسيا</div>
+          </div>
+          <div class="english-name">Sanchia</div>
+              <img src="images/Flag_of_South_Africa.svg" alt="علم جنوب أفريقيا" class="flag-icon-img" />
+
+        </div>
+      </div>
+      
+      <h2 class="title">مسار 21 كيلــــو</h2>
+      <div class="cards">
+        <div class="winner-card card-blue">
+          <div class="place">1</div>
+          <div class="icon">🥇</div>
+          <div class="name-with-flag">
+            <!-- العلم المغربي -->
+            
+            <div class="name">رقية الموكم</div>
+          </div>
+          <div class="english-name">Rkia el Moukim</div>
+              <img src="images/Flag_of_Morocco.svg" alt="علم المغرب" class="flag-icon-img" />
+
+        </div>
+        <div class="winner-card card-orange">
+          <div class="place">2</div>
+          <div class="icon">🥈</div>
+          <div class="name-with-flag">
+            <!-- العلم السعودي -->
+          
+            <div class="name">رجاء الحجيلي</div>
+          </div>
+          <div class="english-name">Raja Alhejaili</div>
+              <img src="images/Flag_of_Saudi_Arabia.svg" alt="علم السعودية" class="flag-icon-img" />
+
+        </div>
+        <div class="winner-card card-green">
+          <div class="place">3</div>
+          <div class="icon">🥉</div>
+          <div class="name-with-flag">
+            <!-- علم الصومال -->
+            
+            <div class="name">فاطمة عبدي ديني</div>
+          </div>
+          <div class="english-name">Faduma Abdi Dini</div>
+              <img src="images/Flag_of_Somalia.svg" alt="علم الصومال" class="flag-icon-img" />
+
+        </div>
+      </div>
+      
+      <p class="congrats">مبروك للفائزين! 🎉</p>
+    </div>
+  </section>
+  
+  <footer class="footer">
+    <p>&copy; 2025 ماراثون معالم المدينة</p>
+  </footer>
+      <script src="js/maalem Almadinh.js"></script>
+
+</body>
+</html>
