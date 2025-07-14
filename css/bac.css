@@ -1,0 +1,353 @@
+:root {
+    --primary: #2c786c;
+    --secondary: #ff9800;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --success: #28a745;
+    --danger: #dc3545;
+    --border: #e0e0e0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tajawal', sans-serif;
+}
+
+body {
+    background-image: url('../images/Login.png');
+    color: var(--dark);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: white;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.logo span {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--primary);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 500;
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.3s;
+}
+
+nav ul li a.active {
+    color: var(--primary);
+}
+
+nav ul li a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary);
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Main Content */
+.page-title {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 2rem;
+    color: var(--primary);
+    position: relative;
+}
+
+.page-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    right: 50%;
+    transform: translateX(50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--secondary);
+}
+
+.booking-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.user-info h2 {
+    color: var(--primary);
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.info-row {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.info-label {
+    font-weight: 600;
+    color: var(--dark);
+    min-width: 80px;
+}
+
+.info-value {
+    color: #555;
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #235e54;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: var(--secondary);
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #e68a00;
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background-color: #dc3545;
+    border: 1px solid var(--border);
+    color: var(--dark);
+}
+
+.btn-outline:hover {
+    background-color: #f5f5f5;
+    transform: translateY(-2px);
+}
+
+/* Footer Styles */
+footer {
+    background: linear-gradient(135deg, #2c3e50 0%, #4a5fc1 100%);
+    color: white;
+    padding: 40px 0 20px;
+    margin-top: 50px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 300px;
+}
+
+.footer-section .logo {
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.footer-section .logo img {
+    height: 60px;
+}
+
+.footer-section .logo h3 {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.weather {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px 0;
+}
+
+.weather-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.weather-item i {
+    font-size: 1.5rem;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    opacity: 0.8;
+}
+
+.payment-methods {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+    font-size: 1.8rem;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-media a {
+    color: white;
+    font-size: 1.3rem;
+    transition: transform 0.3s;
+}
+
+.social-media a:hover {
+    transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        justify-content: center;
+    }
+
+    .user-profile {
+        margin-top: 10px;
+    }
+
+    .actions {
+        justify-content: center;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.btn-logout {
+    background-color: var(--secondary-color);
+    color: #fff;
+    align-self: flex-end;
+    width: fit-content;
+    padding: 8px 18px;
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}

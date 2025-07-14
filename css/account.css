@@ -1,0 +1,676 @@
+/* General Styles */
+:root {
+    --primary-color: #007bff; /* أزرق للأزرار الرئيسية (مثل "إضافة مشترك جديد") */
+    --payment-color: #28a745; /* أخضر لزر الدفع */
+    --danger-color: #dc3545; /* أحمر للأزرار الخطرة */
+    --secondary-color: #6c757d; /* رمادي للأزرار الثانوية / زر تسجيل الخروج */
+    --page-bg: #e9ebee; /* رمادي فاتح لخلفية الصفحة من الصورة الأولى*/
+    --dark-text: #343a40;
+    --light-text: #606060; /* نص أفتح للمعلومات الثانوية */
+    --border-color: #e0e0e0;
+    --card-bg: #ffffff;
+    --header-bg: #fdfdff; /* أبيض فاتح جدًا للهيدر */
+    --header-nav-color: #333; /* رمادي أغمق لروابط التنقل في الهيدر */
+    --header-nav-hover-color: var(--primary-color);
+
+    /* ألوان جديدة للفوتر */
+    --footer-bg-gradient-start: #4a5fc1;
+    --footer-bg-gradient-mid: #6b73d9;
+    --footer-bg-gradient-end: #8b7ee8;
+    --footer-text-color: #ffffff;
+    --footer-border-color: rgba(255, 255, 255, 0.2);
+    --footer-social-bg: rgba(0, 0, 0, 0.3);
+}
+.bg-light {
+    --bs-bg-opacity:1;
+    background-color: rgba(var(--bs-light-rgb),var(--bs-bg-opacity))!important;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    direction: rtl; /* من اليمين لليسار للعربية */
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    /* هذا هو الجزء المهم الذي تم تعديله: إزالة الصورة واستخدام اللون */
+    background-color: var(--page-bg); /* استخدام اللون الرمادي الفاتح للخلفية*/
+    /* تم إزالة background-image, background-size, background-position, background-attachment */
+    color: var(--dark-text);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.main-header {
+    background-color: var(--header-bg);
+    border-bottom: 1px solid var(--border-color);
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    max-width: 80px;
+    height: auto;
+}
+
+.logo .logo-text {
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--dark-text);
+    white-space: nowrap;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-nav li {
+    margin-right: 25px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--header-nav-color);
+    font-weight: 500;
+    padding: 8px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* تعديل لون "حسابي" في الناف بار إلى الأبيض وإزالة الخط */
+.main-nav a.active {
+    color: #ffffff; /* لون أبيض */
+}
+
+.main-nav a.active::after {
+    background-color: transparent; /* إزالة الخط */
+}
+
+/* الحفاظ على تأثير التحويم للروابط الأخرى */
+.main-nav a:hover {
+    color: var(--header-nav-hover-color);
+}
+.main-nav a:hover::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+    transform: scaleX(1);
+    transition: transform 0.3s ease;
+}
+.main-nav a:not(.active)::after {
+    transform: scaleX(0);
+}
+
+/* Main Content */
+.account-page-content {
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* تغيير لون كلمة "حسابي" الرئيسية إلى الأبيض */
+.page-title {
+    font-size: 2.5rem;
+    color: #0e0e0e; /* لون أبيض*/
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.page-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+}
+
+.main-account-card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 40px;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.user-profile-section,
+.account-actions-section {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0;
+}
+
+/* No 'order' properties here, back to default HTML flow */
+.user-profile-section {
+    padding-left: 20px; /* Separator on the left of this section */
+    border-left: 1px solid var(--border-color);
+    text-align: right;
+    align-items: flex-end;
+}
+
+.account-actions-section {
+    padding-right: 20px;
+    text-align: right;
+    align-items: flex-end;
+}
+
+
+.user-profile-section h3 {
+    font-size: 1.5rem;
+    color: var(--dark-text);
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.user-profile-section p {
+    margin: 5px 0;
+    font-size: 1.1rem;
+    color: var(--light-text);
+    width: 100%;
+}
+
+/* تغيير لون "قائمة المشتركين" إلى الأبيض */
+.account-actions-section h2 {
+    font-size: 1.6rem;
+    color: #ffffff; /* لون أبيض*/
+    margin-top: 0;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.subscribers-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    align-items: flex-end;
+    margin-top: 20px;
+}
+
+/* Buttons */
+.btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: fit-content;
+}
+
+.btn-primary {
+    background-color: var(--payment-color);
+    color: #fff;
+    width: 100%;
+    max-width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-primary:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.money-icon {
+    width: 1.2em;
+    height: auto;
+    margin-right: 5px;
+    order: -1;
+    filter: brightness(0) invert(1);
+}
+
+.btn-danger {
+    background-color: var(--danger-color);
+    color: #fff;
+    width: 100%;
+    max-width: 200px;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    transform: translateY(-2px);
+}
+
+.btn-logout {
+    background-color: var(--secondary-color);
+    color: #fff;
+    align-self: flex-end;
+    width: fit-content;
+    padding: 8px 18px;
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+.btn-logout:hover {
+    background-color: #5a6268;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: #e0e0e0;
+    color: var(--dark-text);
+}
+
+.btn-secondary:hover {
+    background-color: #d0d0d0;
+    transform: translateY(-2px);
+}
+
+.add-subscriber-btn {
+    display: block;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    color: white;
+    margin-top: 20px;
+}
+.add-subscriber-btn:hover {
+    background-color: #0056b3;
+}
+
+
+/* NEW FOOTER STYLES */
+
+.footer {
+    background: #334; /* تم تغيير هذا ليتناسب مع الخلفية الرمادية الداكنة*/
+    color: var(--footer-text-color);
+    padding: 40px 0 20px;
+    min-height: 300px;
+    text-align: center; /* Adjust based on overall footer layout */
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px 20px;
+}
+
+/* Right Section (Logo + Weather + Copyright) - Assumed this is the left side in the image layout (RTL) */
+.footer-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align content to the left in LTR, but RTL might need end */
+    gap: 30px;
+    text-align: right; /* Ensure text inside is aligned right */
+}
+/* This style was in your provided CSS but was inside footer-right, making it align-start.
+   Given the image, the overall footer-right content should be centered or right-aligned. */
+.footer-right {
+    text-align: center;
+    align-items: center; /* If you want its content truly centered */
+}
+
+
+/* Logo Section in Footer-Right */
+.logo-section .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centered in the image */
+    gap: 10px;
+    width: 100%; /* Take full width to allow centering */
+}
+
+.logo-icon {
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.logo h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    color: var(--footer-text-color); /* Ensure color is white */
+}
+
+/* Weather Section */
+.weather-section {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--footer-border-color);
+    width: 100%; /* Take full width of its container */
+    max-width: 280px; /* Adjust max-width as per image */
+}
+
+.weather-section h3 { /* This rule was for h3, but your HTML has h2 directly in .logo */
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    text-align: center;
+    color: var(--footer-text-color);
+}
+
+.weather-info {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.weather-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: var(--footer-text-color); /* Ensure weather info is white */
+}
+
+.weather-icon {
+    font-size: 1.8rem;
+    color: var(--footer-text-color);
+    opacity: 0.9;
+}
+
+.weather-value {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+/* Copyright Section - now directly under footer-right based on your HTML */
+.copyright {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    color: var(--footer-text-color);
+    margin-top: 20px; /* Adjust margin as needed */
+    width: 100%; /* Ensure it takes full width */
+}
+
+
+/* Center Section (Text + Payment + Social) - Assumed this is the right side in the image layout (RTL) */
+.footer-center {
+    flex: 2; /* Takes more space as per image */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center; /* All content in this section is centered */
+    text-align: center;
+}
+
+.main-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 600px;
+    color: var(--footer-text-color);
+}
+
+.payment-methods {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.payment-icon {
+    background: white;
+    color: #333;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    min-width: 60px;
+    justify-content: center;
+}
+
+.payment-icon:hover {
+    transform: translateY(-2px);
+    cursor: pointer;
+}
+
+.apple-pay {
+    background: #000;
+    color: white;
+}
+
+.visa {
+    background: #1a1f71;
+    color: white;
+}
+
+.mastercard {
+    background: #eb001b;
+    color: white;
+}
+
+.mada {
+    background: #00a651;
+    color: white;
+}
+
+/* Social media */
+.social-media {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center; /* Centered in the image */
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: var(--footer-social-bg);
+    border-radius: 50%;
+    text-decoration: none;
+    color: var(--footer-text-color);
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+    border: 1px solid var(--footer-border-color);
+}
+
+.social-icon:hover {
+    background: rgba(0, 0, 0, 0.5);
+    transform: translateY(-2px);
+}
+
+.social-icon.tiktok:hover {
+    background: #000;
+}
+
+.social-icon.instagram:hover {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+/* Xing (fab fa-xing) is usually for business, but used here for X (Twitter) */
+.social-icon.x:hover {
+    background: #000;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-header .container {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: flex-end;
+        margin-top: 15px;
+    }
+
+    .main-nav li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .main-account-card {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        gap: 30px;
+    }
+
+    .account-actions-section {
+        order: initial;
+        padding-top: 20px;
+        border-top: 1px solid var(--border-color);
+        padding-right: 0;
+        align-items: center;
+        text-align: center;
+    }
+    .user-profile-section {
+        order: initial;
+        padding-bottom: 20px;
+        border-bottom: 1px solid var(--border-color);
+        padding-left: 0;
+        border-left: none;
+        align-items: center;
+        text-align: center;
+    }
+
+    .user-profile-section:last-child {
+        border-bottom: none;
+    }
+
+    .btn-logout {
+        align-self: center;
+    }
+
+    .subscribers-actions {
+        align-items: center;
+        margin-top: 15px;
+    }
+
+    .btn-primary {
+        max-width: 100%;
+    }
+
+    /* Footer Responsive */
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    .footer-right,
+    .footer-center {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo-section .logo {
+        align-items: center;
+    }
+
+    .weather-section {
+        width: 80%; /* Adjust width for mobile */
+        max-width: 300px; /* Still have a max-width */
+    }
+
+    .payment-methods,
+    .social-media {
+        justify-content: center;
+    }
+
+    .copyright {
+        margin-top: 15px; /* Adjust spacing */
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 2rem;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 10px 15px;
+    }
+
+    .logo img {
+        max-width: 70px;
+    }
+
+    .logo .logo-text {
+        font-size: 1.2rem;
+    }
+
+    .footer {
+        padding: 30px 0;
+    }
+    .footer-container {
+        gap: 20px;
+    }
+    .footer-text-column p {
+        font-size: 1rem;
+    }
+    .payment-methods img {
+        height: 25px;
+    }
+    .footer-logo-column img {
+        max-width: 120px;
+    }
+    .weather-widget {
+        padding: 10px 15px;
+    }
+    .weather-info {
+        font-size: 1.1rem;
+    }
+    .social-icons img {
+        height: 25px;
+    }
+    .copyright {
+        font-size: 0.8rem;
+    }
+}
