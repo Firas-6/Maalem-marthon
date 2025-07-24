@@ -281,3 +281,143 @@ body {
     color: #dc2626;
     border: 1px solid #fecaca;
 }
+
+
+/* Footer */
+.footer {
+  background-color: #2d2d3a;
+  color: #fff;
+  padding: 40px 20px;
+  font-family: 'Cairo', sans-serif;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+.footer-logo-weather {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.footer-logo {
+  width: 160px;
+  margin-bottom: 10px;
+}
+
+.weather-box {
+  background: #4f4f67;
+  padding: 15px;
+  border-radius: 8px;
+  width: 200px;
+}
+
+.weather-title {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.weather-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+}
+
+.footer-text {
+  flex: 2;
+  font-size: 1rem;
+  color: #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.payment-icons {
+  margin: 30px 0;
+}
+
+.payment-icons img {
+  width: 60px;
+  vertical-align: middle;
+  background-color: white;
+}
+
+.rounded {
+    border-radius: 0.50rem;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.footer-bottom a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons a {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.social-icons img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .footer-logo-weather,
+  .footer-text {
+    width: 100%;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+  }
+}
