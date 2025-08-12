@@ -1,0 +1,586 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif; 
+}
+
+body {
+    margin: 0;
+    direction: rtl; 
+    color: #222;
+    background-color: #f0f2f5; 
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+.navbar {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 15px 0;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    color: #333;
+    font-size: 24px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 25px;
+}
+
+.navbar-links a {
+    color: #666;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+    color: #007bff;
+}
+
+.navbar-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+.navbar-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+
+.hero-section {
+    background-image: url('../images/hero.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 400px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 4.5em; 
+    font-weight: 800;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: 1.8em;
+    font-weight: 300;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+
+.main-content {
+    padding: 40px 0;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card-content h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.card-link {
+    display: inline-block;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.card-link:hover {
+    color: #0056b3;
+}
+
+
+.gallery-section {
+    padding: 60px 0; 
+    text-align: center;
+}
+
+.gallery-title {
+    font-size: 3.5em; 
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block; 
+}
+
+.gallery-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    width: 80px;
+    height: 4px;
+    background-color: #007bff;
+    border-radius: 2px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 25px; 
+    margin-top: 30px;
+}
+
+.gallery-item {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 15px;
+}
+
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #334;
+    color: white;
+    margin-top: 50px; /* Keep margin-top for separation */
+    border-top-left-radius: 12px; /* Keep rounded corners */
+    border-top-right-radius: 12px; /* Keep rounded corners */
+}
+
+.footer-spacing {
+    padding: 20px 0; /* Adjust as needed for spacing within the footer */
+}
+
+.first-footer {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.first-footer img {
+    width: 200px;
+    height: auto;
+}
+
+/* Weather section styles (if used) */
+#weather {
+    /* display: none; */ /* Keep this if you want to hide it by default */
+    margin-top: 10px;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    background: #4f4f67;
+}
+
+#weather .text-center {
+    text-align: center;
+}
+
+#weather .text-white {
+    color: white;
+}
+
+#weather .mt-10 {
+    margin-top: 10px;
+}
+
+#weather .rounded {
+    border-radius: 0.25rem;
+}
+
+#weather .px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+#weather .py-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+#weather .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -0.5rem; /* Adjust for gap */
+    margin-right: -0.5rem; /* Adjust for gap */
+}
+
+#weather .justify-content-center {
+    justify-content: center;
+}
+
+#weather .ltr {
+    direction: ltr; /* For specific elements if needed */
+}
+
+#weather .col-2 {
+    flex: 0 0 auto;
+    width: 16.666667%; /* 2/12 */
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+#weather .col-3 {
+    flex: 0 0 auto;
+    width: 25%; /* 3/12 */
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+#weather .align-self-center {
+    align-self: center;
+}
+
+#weather .las {
+    font-size: 2.5rem; /* 2x */
+}
+
+#weather .fs-20 {
+    font-size: 1.25rem; /* 20px */
+}
+
+#weather .d-inline {
+    display: inline;
+}
+
+
+.second-footer {
+    /* Add styles for second-footer if needed */
+}
+
+.footer-text p {
+    font-size: 1rem; /* Adjust font size as needed */
+    line-height: 1.6;
+    color: #ccc; /* Lighter color for text in dark footer */
+    margin-bottom: 20px;
+}
+
+/* Basic grid system for footer columns, mimicking Bootstrap */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px; /* Adjust for padding in columns */
+    margin-right: -15px; /* Adjust for padding in columns */
+}
+
+.col-lg-12, .col-lg-4, .col-lg-8, .col-lg-7, .col-lg-5, .col-md-12, .col {
+    padding-left: 15px; /* Add padding to columns */
+    padding-right: 15px; /* Add padding to columns */
+}
+
+.col-lg-12 {
+    flex: 0 0 auto;
+    width: 100%;
+}
+
+.col-lg-4 {
+    flex: 0 0 auto;
+    width: 33.333333%; /* Bootstrap col-lg-4 */
+}
+
+.col-lg-8 {
+    flex: 0 0 auto;
+    width: 66.666667%; /* Bootstrap col-lg-8 */
+}
+
+.col-lg-7 {
+    flex: 0 0 auto;
+    width: 58.333333%; /* Bootstrap col-lg-7 */
+}
+
+.col-lg-5 {
+    flex: 0 0 auto;
+    width: 41.666667%; /* Bootstrap col-lg-5 */
+}
+
+.col-md-12 {
+    flex: 0 0 auto;
+    width: 100%;
+}
+
+.col { /* For general column usage like in weather section */
+    flex: 1 0 0%;
+}
+
+.mt-100 {
+    margin-top: 100px;
+}
+
+.d-inline-block {
+    display: inline-block;
+}
+
+.p-1 {
+    padding: 0.25rem;
+}
+
+.mx-1 {
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+}
+
+.rounded {
+    border-radius: 0.25rem;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.bottom-footer-text {
+    padding-top: 20px; /* Space above copyright */
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Separator line */
+    margin-top: 20px;
+}
+
+.copyright {
+    font-size: 0.9em;
+    color: #aaa;
+}
+
+.copyright a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.copyright a:hover {
+    text-decoration: underline;
+}
+
+.widget_social_wrapper {
+    margin-top: 15px; /* Space above social icons */
+}
+
+.social-icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Arrange icons in a row */
+    justify-content: center; /* Center social icons */
+    gap: 10px; /* Space between icons */
+}
+
+.social-icons li {
+    display: inline-block; /* For list-inline effect */
+}
+
+.social-icons li a {
+    display: block;
+    width: 40px; /* Adjust size of icon container */
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%; /* Make icons circular */
+    background-color: rgba(255, 255, 255, 0.1); /* Light background for icons */
+    transition: background-color 0.3s ease;
+}
+
+.social-icons li a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.social-icons img {
+    width: 32px; /* Fixed width for icon images */
+    height: 32px; /* Fixed height for icon images */
+    vertical-align: middle; /* Align image vertically in the middle */
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .hero-content h1 {
+        font-size: 3.5em;
+    }
+    .hero-content p {
+        font-size: 1.5em;
+    }
+    .gallery-title {
+        font-size: 3em;
+    }
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on larger screens */
+    }
+    .col-lg-4, .col-lg-8, .col-lg-7, .col-lg-5 {
+        width: 100%; /* Stack columns on smaller large screens */
+    }
+    .footer-spacing .row > div {
+        margin-bottom: 20px; /* Add space between stacked columns */
+    }
+    .mt-100 {
+        margin-top: 50px; /* Reduce margin on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .navbar-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    .hero-section {
+        height: 300px;
+    }
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+    .hero-content p {
+        font-size: 1.2em;
+    }
+    .cards-grid {
+        grid-template-columns: 1fr; /* Stack cards on small screens */
+    }
+    .card {
+        margin-bottom: 20px;
+    }
+    .gallery-title {
+        font-size: 2.5em;
+    }
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+    }
+    .gallery-item img {
+        height: 200px;
+    }
+    .col-lg-4, .col-lg-8, .col-lg-7, .col-lg-5, .col-md-12 {
+        width: 100%; /* Ensure stacking on tablet */
+    }
+    .bottom-footer-text .row {
+        flex-direction: column; /* Stack copyright and social icons */
+    }
+    .bottom-footer-text .col-lg-5 {
+        margin-top: 15px; /* Space between stacked footer parts */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-brand {
+        font-size: 20px;
+    }
+    .navbar-links a, .navbar-button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+    .hero-content h1 {
+        font-size: 2em;
+    }
+    .hero-content p {
+        font-size: 1em;
+    }
+    .card-content h2 {
+        font-size: 24px;
+    }
+    .card-content p {
+        font-size: 14px;
+    }
+    .gallery-title {
+        font-size: 2em;
+    }
+    .gallery-grid {
+        grid-template-columns: 1fr; /* Stack images on very small screens */
+    }
+    .gallery-item img {
+        height: 180px;
+    }
+}
