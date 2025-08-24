@@ -1,0 +1,913 @@
+* {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  min-height: 100vh;
+  direction: rtl;
+}
+
+.page {
+  min-height: 100vh;
+  background: #f5f5f5;
+}
+
+/* Header Styles */
+.header {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.nav-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.menu-icon,
+.user-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.menu-icon:hover,
+.user-icon:hover {
+  background: #e0e0e0;
+  transform: scale(1.05);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+.zero-logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #666;
+}
+
+
+
+/* Hero Section */
+.hero-section {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+              url("../images/bg2 1.jpg") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+}
+.hero-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.city-image,
+.marathon-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
+  display: flex;
+  align-items: flex-end;
+  padding: 2rem;
+}
+
+.hero-content {
+  color: white;
+  text-align: center;
+}
+
+.date-badge {
+  background: #ff6b35;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-date {
+  font-size: 2rem;
+  opacity: 0.9;
+}
+
+/* Description Section */
+.description,
+.about {
+  padding: 3rem 2rem;
+  background: white;
+  margin: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.description h2,
+.about h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.description p,
+.about p {
+  line-height: 1.8;
+  color: #666;
+  font-size: 1.1rem;
+  text-align: justify;
+}
+
+/* Pricing Section */
+.pricing,
+.races {
+  padding: 3rem 2rem;
+}
+
+.pricing h2,
+.races h2 {
+  font-size: 2.5rem;
+  color: black;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.pricing-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 5rem;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+}
+.card-blue {
+  background: linear-gradient(135deg, #3f518b, #253254); /* أزرق غامق */
+  color: white;
+}
+
+.card-orange {
+  background: linear-gradient(135deg,  #c8812a,#7a5020); /* بني برتقالي */
+  color: white;
+}
+
+.card-green {
+  background: linear-gradient(135deg, #429a47, #234e25); /* أخضر غامق */
+  color: white;
+}
+
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.distance {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  text-decoration: line-through;
+}
+
+.card h3 {
+  font-size: 3rem;
+  font-weight: 900;
+  margin: 1rem 0;
+  color: white;
+}
+
+.card p {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  background: linear-gradient(45deg, #fbbf24, #f59e0b);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.features {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.features li {
+  padding: 0.5rem 0;
+  color: white;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.register-btn {
+  background: linear-gradient(135deg, #ff8c00, #ff6b00);
+  color: white;
+  font-weight: bold;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.2rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(255, 140, 0, 0.4);
+}
+
+.register-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+
+/* Race Cards */
+.race-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.race-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.race-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.race-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.race-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.race-date {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 0.5rem;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+.race-date .day {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.race-date .month {
+  display: block;
+  font-size: 1rem;
+  color: #666;
+}
+
+.race-info {
+  padding: 1.5rem;
+}
+
+.race-info h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.race-info p {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+
+.btn-details {
+  background: linear-gradient(135deg, #28a745, #20c997);
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  font-weight: 600;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+}
+
+
+.btn-details:hover {
+  background: linear-gradient(135deg, #20c997, #17a2b8);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+}
+
+
+
+/* Placeholder boxes */
+.placeholder-boxes {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  justify-content: center;
+}
+
+/* Navigation buttons */
+.next-page-btn,
+.prev-page-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: linear-gradient(45deg, #4f46e5, #7c3aed);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.prev-page-btn {
+  right: auto;
+  left: 2rem;
+}
+
+.next-page-btn:hover,
+.prev-page-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(79, 70, 229, 0.4);
+}
+
+
+/* Footer */
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #334;
+  color: white;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .pricing-cards,
+  .race-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .header {
+    padding: 1rem;
+  }
+
+  .hero-overlay {
+    padding: 1rem;
+  }
+
+  .description,
+  .about,
+  .pricing,
+  .races {
+    padding: 2rem 1rem;
+    margin: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.5rem;
+  }
+
+  .card h3 {
+    font-size: 2rem;
+  }
+
+  .next-page-btn,
+  .prev-page-btn {
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .prev-page-btn {
+    left: 1rem;
+  }
+}
+.winners-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.title1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #cd1010;
+}
+
+.divider {
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(to right, #2563eb, #f97316, #22c55e);
+  margin: 0 auto 40px;
+  border-radius: 2px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.winner-card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px 20px;
+  width: 300px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.winner-card:hover {
+  transform: translateY(-8px);
+}
+
+.place {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  font-weight: bold;
+  color: #000;
+}
+
+.icon {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.english-name {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.card-blue {
+  background: linear-gradient(135deg, #3f518b, #253254);
+  color: white;
+}
+
+.card-orange {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: white;
+}
+
+.card-green {
+  background: linear-gradient(135deg, #22c55e, #15803d);
+  color: white;
+}
+
+.congrats {
+  margin-top: 50px;
+  font-size: 1.2rem;
+  color: #444;
+}
+
+.prize-amount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.riyal-icon {
+  width: 64px;
+  height: 64px;
+}
+
+.amount {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #ea580c;
+}
+
+.name-with-flag {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.flag-icon-img {
+  margin-top: 8px;
+  width: 50px;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+/* ===== Navbar (New) ===== */
+.main-navbar{
+  position: fixed;
+  top: 0; inset-inline: 0;
+  z-index: 1000;
+  background: rgba(0,0,0,0.9);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+body{ padding-top: 72px; } /* مساحة للهيدر الثابت */
+
+.nav-inner{
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 14px 18px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr; /* يمين: شعار | وسط: روابط | يسار: حساب */
+  align-items: center;
+  gap: 12px;
+}
+
+.brand{
+  justify-self: end; /* يمين لأن RTL */
+  display: inline-flex; align-items: center; gap: 10px;
+}
+.brand-logo{  width: auto; display: block; }
+
+.user-btn{
+  justify-self: start; /* يسار */
+  color: #fff; opacity: .9;
+  display: inline-flex; align-items: center; gap: 8px;
+  transition: opacity .2s ease, transform .2s ease;
+}
+.user-btn:hover{ opacity: 1; transform: translateY(-1px); }
+
+.nav-links{
+  justify-self: center;
+  display: flex; align-items: center; gap: 32px;
+}
+.nav-link{
+  color: #d7d7d7; text-decoration: none;
+  font-weight: 600; letter-spacing: .2px;
+  transition: color .2s ease, opacity .2s ease;
+}
+.nav-link:hover{ color:#fff; }
+.nav-link.active::after{
+  content:""; position:absolute; bottom:-10px; inset-inline: 25%;
+  height:3px; border-radius:2px;
+}
+
+/* زر القائمة للموبايل */
+.nav-toggle{
+  display: none;
+  background: transparent; color:#fff;
+  border: 0; padding: 8px; border-radius: 10px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 992px){
+  .nav-inner{
+    grid-template-columns: auto 1fr auto; /* شعار | مساحة | حساب */
+  }
+  .nav-toggle{
+    display: inline-flex; align-items: center; justify-content: center;
+    order: 3; /* في المنتصف بصريًا */
+  }
+  .nav-links{
+    position: fixed;
+    top: 64px; inset-inline: 0;
+    background: rgba(0,0,0,0.95);
+    backdrop-filter: blur(8px);
+    display: grid; gap: 0;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    max-height: 0; overflow: hidden;
+    transition: max-height .3s ease;
+  }
+  .nav-links.open{ max-height: 220px; }
+  .nav-link{
+    padding: 14px 22px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+  .brand{ order: 1; }
+  .user-btn{ order: 2; }
+}
+/* اجعل الشعار يمينًا (RTL) */
+.main-navbar .nav-inner{
+  grid-template-columns: auto 1fr auto; /* شعار | روابط | حساب */
+  direction: rtl;
+}
+
+.main-navbar .brand{
+  justify-self: start; /* في RTL = يمين */
+}
+
+.main-navbar .user-btn{
+  justify-self: end;   /* في RTL = يسار */
+}
+
+/* ضبط ترتيب العناصر في الجوال */
+@media (max-width: 992px){
+  .main-navbar .brand{ order: 1; }
+  .main-navbar .nav-toggle{ order: 2; }
+  .main-navbar .user-btn{ order: 3; }
+}
+/* =========================
+   Footer (match screenshot)
+   ========================= */
+:root{
+  --ink:#2e3042;      /* خلفية الفوتر */
+  --ink-2:#424458;    /* درجات أدكن */
+  --ink-3:#4f4f67;    /* صندوق الطقس */
+  --text:#f2f2f7;
+  --muted:#c9cad3;
+  --brand:#00BFA6;
+  --radius:18px;
+  --shadow:0 10px 28px rgba(0,0,0,.22);
+}
+
+.footer{
+  background:var(--ink);
+  color:var(--text);
+  padding-top:56px;
+  padding-bottom:28px;
+  position:relative;
+  overflow:hidden;
+}
+
+/* الشعار */
+.first-footer .auto_size{
+  display:block;
+  max-width:220px;
+  width:200px;
+  margin:0 auto 18px;
+  filter: drop-shadow(0 4px 16px rgba(0,0,0,.15));
+}
+
+/* صندوق الطقس */
+#weather h4{
+  font-weight:700;
+  margin:10px 0 14px;
+  color:var(--text);
+  text-align:center;
+}
+#weather .rounded{
+  background:var(--ink-3) !important; /* يغلب الـ style inline */
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  max-width:740px;
+  margin:0 auto;
+}
+#weather .ltr{ direction:ltr; }
+#weather .fs-20{ font-size:1.35rem; font-weight:800; letter-spacing:.3px; }
+#weather i{ color:var(--muted); }
+
+/* نص التعريف */
+.second-footer .footer-text p{
+  color:var(--muted);
+  line-height:1.9;
+  font-size:1.05rem;
+  margin:0;
+}
+
+/* ===== شعارات الدفع (حل مشكلة الأشرطة البيضاء) ===== */
+.footer .mt-100{ margin-top:56px !important; }
+
+.footer .col.text-center > .d-inline-block{
+  /* اجعل الحاوية Flex بدل inline-block */
+  display:flex !important;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.footer .col.text-center > .d-inline-block > .p-1.bg-white.d-inline-block.rounded{
+  display:inline-flex !important;
+  align-items:center;
+  justify-content:center;
+  padding:6px !important;
+  margin:0 !important;
+  background:#fff !important;
+  border-radius:12px !important;
+  box-shadow:0 8px 18px rgba(0,0,0,.12);
+  transition:transform .2s ease, box-shadow .2s ease;
+  width:auto !important;   /* أكّد عدم التمدد */
+}
+.footer .col.text-center > .d-inline-block > .p-1.bg-white.d-inline-block.rounded:hover{
+  transform:translateY(-3px);
+  box-shadow:0 14px 24px rgba(0,0,0,.18);
+}
+.footer .col.text-center img{
+  width:50px !important;
+  height:auto !important;
+  display:block;
+  border-radius:8px;
+}
+
+/* خط فاصل + حقوق النشر */
+.bottom-footer-text{
+  border-top:1px solid rgba(255,255,255,.08);
+  margin-top:36px;
+  padding-top:18px;
+}
+.copyright span,
+.copyright a{
+  color:var(--muted);
+  font-size:.98rem;
+}
+.copyright a:hover{ color:#fff; }
+
+/* أيقونات السوشال */
+.widget_social_wrapper .social-icons{
+  margin:0; padding:0;
+}
+.widget_social_wrapper .social-icons li{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:42px; height:42px;
+  margin:0 6px;
+  border-radius:12px;
+  background:rgba(255,255,255,.08);
+  transition:transform .2s ease, background .2s ease, box-shadow .2s ease;
+  box-shadow:0 6px 16px rgba(0,0,0,.15);
+}
+.widget_social_wrapper .social-icons li:hover{
+  transform:translateY(-3px) scale(1.03);
+  background:rgba(255,255,255,.16);
+}
+.widget_social_wrapper .social-icons img{
+  width:24px; height:24px; display:block;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,.2));
+}
+
+/* تحسينات رسپونسف */
+@media (max-width: 992px){
+  .second-footer .footer-text p{ text-align:center; font-size:1rem; }
+  .footer .mt-100{ margin-top:40px !important; }
+}
+@media (max-width: 576px){
+  .first-footer .auto_size{ width:180px; }
+  #weather .fs-20{ font-size:1.2rem; }
+  .copyright span{ display:block; margin-bottom:10px; }
+}
+
+/* لمسة خلفية خفيفة */
+.footer::before{
+  content:"";
+  position:absolute; inset-inline-start:-30%; bottom:-40%;
+  width:80%; height:120%;
+  background:radial-gradient(60% 50% at 50% 50%, rgba(0,191,166,.09) 0%, rgba(0,0,0,0) 70%);
+  transform:rotate(-8deg); pointer-events:none;
+}
+.footer::after{
+  content:"";
+  position:absolute; inset-inline-end:-25%; top:-35%;
+  width:70%; height:110%;
+  background:radial-gradient(60% 50% at 50% 50%, rgba(255,255,255,.05) 0%, rgba(0,0,0,0) 70%);
+  transform:rotate(10deg); pointer-events:none;
+}
+/* ====== Weather pills like screenshot ====== */
+#weather h4{
+  margin: 10px 0 18px;
+  font-weight: 800;
+  letter-spacing: .2px;
+}
+
+#weather .pill-row{
+  display: flex;
+  gap: 22px;
+  justify-content: center; /* وسط الصفحة مثل الصورة */
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* الحبة */
+#weather .weather-pill{
+  background: #4f4f67;
+  border-radius: 18px;
+  box-shadow: 0 10px 28px rgba(0,0,0,.22);
+  padding: 16px 26px;
+  min-width: 280px;         /* عرض قريب جدًا من الصورة */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+/* النص داخل الحبة */
+#weather .weather-pill .unit{
+  font-size: 1rem;
+  opacity: .85;
+  margin-inline-end: 6px;
+}
+#weather .weather-pill .value{
+  font-size: 1.9rem;        /* الرقم كبير وواضح */
+  font-weight: 900;
+  line-height: 1;
+}
+
+/* استجابة شاشة أصغر */
+@media (max-width: 576px){
+  #weather .weather-pill{ min-width: 230px; padding: 14px 20px; }
+  #weather .weather-pill .value{ font-size: 1.6rem; }
+}
+
+
+
+
